@@ -1,0 +1,145 @@
+* {
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #393E8F;
+}
+
+.header-section{
+    margin-top: -10px;
+    display: flex;
+    flex: 1 1 140px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    background-color: #B12228;
+    font-size: 24px;
+    color: #F3CC64;
+}
+
+.score-section {
+    background-color: #12194A;
+    color: #F3CC64;
+    font-size: 36px;
+    width: 100vw;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+
+.box-inside-score-section-1 {
+    display: flex;
+    flex: 1;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin: 30px;
+}
+
+.box-inside-score-section-2 {
+    display: flex;
+    flex: 1;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 30px;
+}
+
+.player-name {
+    display: flex;
+    flex: 12;
+    justify-content: flex-end;
+}
+
+.player-score {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.computer-name {
+    display: flex;
+    flex: 12;
+    justify-content: flex-start;
+}
+
+.computer-score {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.buttons-section {
+    color: white;
+    background-color: #393E8F;
+    width: 100vw;
+    display: flex;
+    flex: 5 1 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+#rock,
+#paper,
+#scissors {
+    margin: 20px;
+}
+
+img.weapon {
+    width: auto;
+    height: 140px;
+    margin: 60px;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+.weapon-text {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    margin-top: -40px;
+}
+
+.footer-section {
+    width: 100vw;
+    font-size: 24px;
+    background-color: #FFFFFF;
+    color: #12194A;
+    display: flex;
+    flex: 1 1 30px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    position: fixed;
+    bottom: 0;
+}
+
+.inside-footer-box {
+    display: flex;
+    justify-content: center;
+}
+
+.odin-icon {
+    display: flex;
+    justify-content: flex-end;
+    height: 38px;
+    flex-wrap: wrap;
+    margin: 6px;
+}
+
+.footer-text {
+    display: flex;
+    flex: 1 0 20px;
+    justify-content: flex-start;
+    align-items: center;
+}

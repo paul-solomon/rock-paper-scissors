@@ -2,12 +2,59 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Rock Paper Scissors</title>
-
+        <title>CBD'S RPS</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+        <script src="myscript.js" defer></script>
     </head>
 
     <body>
-        <script src="myscript.js"></script>
+        <div class="header-section">
+            <p class="text-intro">THREE possible choices. TWO entities with storage memory and processing power. A single winner.
+                <br>
+                Beat the Computer in a first-to-three INTENSE game of ROCK, PAPER, SCISSORS!
+            </p>
+        </div>
 
+        <div class="score-section">
+            <div class="box-inside-score-section-1">
+                <div class="player-name">PLAYER</div>
+                <div class="player-score">0</div>
+            </div>
+
+            <div class="box-inside-score-section-2">
+                <div class="computer-score">0</div>
+                <div class="computer-name">COMPUTER</div>
+            </div>
+        </div>
+
+        <div class="buttons-section">
+            <div id="rock" class="rock-icon img">
+                <img class="weapon" src="/images/rock.png" 
+                     alt="Mickey Mouse's hand showing the rock sign."></img>
+                <span class="weapon-text">ROCK</span>
+            </div>
+
+            <div id="paper" class="paper-icon img">
+                <img class="weapon" src="/images/paper.png" 
+                     alt="Mickey Mouse's hand showing the paper sign."></img>
+                <span class="weapon-text">PAPER</span>
+            </div>
+
+            <div id="scissors" class="scissors-icon img">
+                <img class="weapon" src="/images/scissors.png" 
+                     alt="Mickey Mouse's hand showing the scissors sign."></img>
+                <span class="weapon-text">SCISSORS</span>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <div class="inside-footer-box">
+                <a href="https://www.theodinproject.com/"><img class="odin-icon" src="/images/odin-icon.png" alt="The Odin Project logo."></a>
+                <span class="footer-text">The Odin Project made me do it.</span>
+            </div>
+        </div>
     </body>
 </html>
