@@ -1,21 +1,33 @@
-    //create a new element for player score in the DOM, then add content
-    let playerScore = document.createElement('div');
-    let playerPoints = 0;
-    playerScore.innerText = playerPoints;
+    // //create a new element for player score in the DOM, then add content
+    // let playerScore = document.createElement('div');
+    // let playerPoints = 0;
+    // playerScore.innerText = playerPoints;
 
-    //append the element to the DOM
-    let parentOfPlayerScore = document.getElementById('parent1');
-    parentOfPlayerScore.appendChild(playerScore);
+    // //append the element to the DOM
+    // let parentOfPlayerScore = document.getElementById('parent1');
+    // parentOfPlayerScore.appendChild(playerScore);
 
-    //create a new element for computer score in the DOM, then add content
-    let computerScore = document.createElement('div');
-    let computerPoints = 0;
-    computerScore.innerText = computerPoints;
+    // //create a new element for computer score in the DOM, then add content
+    // let computerScore = document.createElement('div');
+    // let computerPoints = 0;
+    // computerScore.innerText = computerPoints;
 
-    //append the element to the DOM
-    let parentOfComputerScore = document.getElementById('parent2');
-    let computerScoreElement = document.getElementById('computer-score');
-    parentOfComputerScore.insertBefore(computerScore, computerScoreElement);
+    // //append the element to the DOM
+    // let parentOfComputerScore = document.getElementById('parent2');
+    // let computerScoreElement = document.getElementById('computer-score');
+    // parentOfComputerScore.insertBefore(computerScore, computerScoreElement);
+
+    playerScore = 0;
+    computerScore = 0;
+
+    playerScoreContainer = document.getElementById('player-score');
+    computerScoreContainer = document.getElementById('computer-score');
+
+    playerScoreContainer.innerText = playerScore;
+    computerScoreContainer.innerText = computerScore;
+
+    resultContainer = document.getElementById('result');
+
     
         //create a function that gets computer's choice
         function getComputerChoice() {
@@ -43,37 +55,41 @@
     
             //DRAW
             if (playerSelection == computerSelection) {
-                alert(`IT'S A DRAW!`);
+                updateResult(`IT'S A DRAW!`);
             }
     
             // Rock vs Paper
             else if ((playerSelection == 'Rock') && (computerSelection == 'Paper')) {
-                // alert('Paper beats Rock. Computer Wins!');
-                keepComputerScore();
+                updateResult('Paper beats Rock. Computer Wins!');
+                updateScore(true);
             }
     
             else if ((playerSelection == 'Paper') && (computerSelection == 'Rock')) {
-                alert('Paper beats Rock. Human Wins!');
+                updateResult('Paper beats Rock. Human Wins!');
+                updateScore(false);
             }
     
             // Rock vs Scissors
             else if ((playerSelection == 'Rock') && (computerSelection == 'Scissors')) {
-                alert('Rock beats Scissors. Human Wins!');
+                updateResult('Rock beats Scissors. Human Wins!');
+                updateScore(false);
             }
     
             else if ((playerSelection == 'Scissors') && (computerSelection == 'Rock')) {
-                // alert('Rock beats Scissors. Computer Wins!');
-                keepComputerScore();
+                updateResult('Rock beats Scissors. Computer Wins!');
+                updateScore(true);
             }
     
             // Scissors vs Paper
             else if ((playerSelection == 'Scissors') && (computerSelection == 'Paper')) {
-                alert('Scissors beats Paper. Human Wins!');
+                updateResult('Scissors beats Paper. Human Wins!');
+                updateScore(false);
             }
     
             else if ((playerSelection == 'Paper') && (computerSelection == 'Scissors')) {
-                // alert('Scissors beats Paper. Computer Wins!');
-                keepComputerScore();
+                updateResult('Scissors beats Paper. Computer Wins!');
+                updateScore(true);
+                
             }
         }
     
@@ -93,7 +109,17 @@
             playRound(playerSelection = 'Scissors');
         });
 
-        function keepComputerScore() {
-            computerPoints++;
-            computerScore.innerText = computerPoints;
+        function updateScore(didComputerWin) {
+            if(didComputerWin) {
+                computerScore++;
+                computerScoreContainer.innerText = computerScore;
+            } else {
+                playerScore++;
+                playerScoreContainer.innerText = playerScore;
+            }
         }
+
+    function updateResult(message) {
+        resultContainer.innerText = message;
+    }
+           
