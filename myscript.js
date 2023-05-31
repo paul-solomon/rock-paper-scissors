@@ -48,7 +48,8 @@
     
             // Rock vs Paper
             else if ((playerSelection == 'Rock') && (computerSelection == 'Paper')) {
-                alert('Paper beats Rock. Computer Wins!');
+                // alert('Paper beats Rock. Computer Wins!');
+                keepComputerScore();
             }
     
             else if ((playerSelection == 'Paper') && (computerSelection == 'Rock')) {
@@ -61,7 +62,8 @@
             }
     
             else if ((playerSelection == 'Scissors') && (computerSelection == 'Rock')) {
-                alert('Rock beats Scissors. Computer Wins!');
+                // alert('Rock beats Scissors. Computer Wins!');
+                keepComputerScore();
             }
     
             // Scissors vs Paper
@@ -70,7 +72,8 @@
             }
     
             else if ((playerSelection == 'Paper') && (computerSelection == 'Scissors')) {
-                alert('Scissors beats Paper. Computer Wins!');
+                // alert('Scissors beats Paper. Computer Wins!');
+                keepComputerScore();
             }
         }
     
@@ -89,3 +92,8 @@
         scissorsButton.addEventListener('click', () => {
             playRound(playerSelection = 'Scissors');
         });
+
+        function keepComputerScore() {
+            computerPoints++;
+            computerScore.innerText = computerPoints;
+        }
